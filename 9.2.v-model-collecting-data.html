@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>VUE Conditional Rendering</title>
+		<meta http-equiv='content-type' content='text/html;charset=utf-8'>
+		<meta name='viewport' content='width=device-width,initial-scale=1.0'>
+		<style>
+		
+			h1,div,p,span{font-size:33px;font-family:helvetica;}
+			input {width:500px; height: 40px; font-size: 36px;}
+		</style>
+		<script type='text/javascript' src='vue.js'></script>
+	<body>	
+		<div id='app'>
+<input v-model='message'/>
+<p>{{message}}<p> <!--p tag is in sync with the input box (message) -->
+<hr>
+<input v-model='new_message'/>
+<p>{{new_message}}<p> <!--p tag is in sync with the input box (new-message) -->
+			
+		</div>
+	<script type='text/javascript'>
+		var vm = new Vue({
+			el:'#app',
+			data:{
+				message:'initial vale set in data.',
+				new_message: 'new message property in data',
+			},
+			
+		})
+
+		/*here we see both input boxes working independently of each other */
+			/*using the placeholder name we can differentiate between the different boxes*/
+	</script>	
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>VUE The V Model directives</title>
+		<meta http-equiv='content-type' content='text/html;charset=utf-8'>
+		<meta name='viewport' content='width=device-width,initial-scale=1.0'>
+		<style>
+		
+			h1,div,p,span{font-size:33px;font-family:helvetica; margin-top: 100px;}
+			textarea {width:500px; height: 240px; font-size: 36px;}
+			span {color:red}
+		</style>
+		<script type='text/javascript' src='vue.js'></script>
+	<body>	
+		<div id='app'>
+<!-- all these radio button will send there message to the message property-->
+<span>apple<span><input type='radio' value='apple' v-model='message'/>
+<span>peach<span><input type='radio' value='peach' v-model='message'/>
+<span>banna<span><input type='radio' value='bananna' v-model='message'/> 
+<span>plum<span><input type='radio' value='plum' v-model='message'/>
+
+<hr>
+<p>you have selected: <span>{{message}}<span></p>
+			
+		</div>
+	<script type='text/javascript'>
+		var vm = new Vue({
+			el:'#app',
+			data:{
+				message:'initial vale set in data.',
+			
+			},  
+		})
+
+
+	</script>	
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

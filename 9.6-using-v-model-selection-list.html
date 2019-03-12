@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>VUE The V Model directives</title>
+		<meta http-equiv='content-type' content='text/html;charset=utf-8'>
+		<meta name='viewport' content='width=device-width,initial-scale=1.0'>
+		<style>
+		
+			h1,div,p,span{font-size:33px;font-family:helvetica; margin-top: 10px;}
+			textarea {width:500px; height: 240px; font-size: 36px;}
+			span {color:red}
+		</style>
+		<script type='text/javascript' src='vue.js'></script>
+	<body>	
+		<div id='app'>
+<!-- all these checkbox will send there message to the message property-->
+
+
+<select v-model='message'>
+	
+<option value='apple'> option 1 </option>
+<option value='banna'> option 2 </option>
+<option value='plum'> option 3 </option>
+<option value='Orange'> option 4 </option>
+</select>
+<hr>
+<p>you have selected: <span>{{message}}<span></p>
+			
+		</div>
+	<script type='text/javascript'>
+		var vm = new Vue({
+			el:'#app',
+			data:{
+				message:'', //because the selection list only supports a single selection we do not need an array.
+			
+			},  
+		})
+
+
+	</script>	
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
